@@ -16,7 +16,7 @@ class MyAdapter: RecyclerView.Adapter<MyHolder> {
     constructor(mActivity:MainActivity) {
         this.mActivity = mActivity
 
-        var path="storage/sdcard/WhatsApp/Media/WhatsApp Images/"
+        var path="storage/sdcarda/WhatsApp/Media/WhatsApp Images/"
         file= File(path)
 
         if(!file!!.exists()){
