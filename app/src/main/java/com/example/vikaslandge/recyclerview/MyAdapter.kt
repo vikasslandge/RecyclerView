@@ -16,7 +16,7 @@ class MyAdapter: RecyclerView.Adapter<MyHolder> {
     constructor(mActivity:MainActivity) {
         this.mActivity = mActivity
 
-        var path="storage/sdcard0/WhatsApp/Media/WhatsApp Images/"
+        var path="storage/sdcard/WhatsApp/Media/WhatsApp Images/"
         file= File(path)
 
         if(!file!!.exists()){
@@ -52,8 +52,11 @@ class MyAdapter: RecyclerView.Adapter<MyHolder> {
         var bmp= ThumbnailUtils.extractThumbnail(b,50,50 )
         holder.cView!!.setImageBitmap(bmp)
 
+        holder.name!!.movementMethod
+
         holder.name!!.text=f.name
-        holder.size!!.text=f.length().toString()
+        var by=f.length()
+        holder.size!!.text=(by/1024).toString()+" kb"
         holder.del!!.setOnClickListener {
 
             f.delete()

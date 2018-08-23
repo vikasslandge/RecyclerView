@@ -9,7 +9,7 @@ class MyHolder: RecyclerView.ViewHolder {
     var cView: CircleImageView? = null
     var del:CircleImageView? = null
     var name: TextView? = null
-    var size:TextView? = null
+    var size:TextView?  = null
     constructor(v: View) : super(v) {
         cView = v.findViewById(R.id.cview)
         del = v.findViewById(R.id.del)
